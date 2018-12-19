@@ -76,10 +76,13 @@ describe('Checks if a string is a question', () => {
 
 //Return a list of words in a string
 describe('Array of words in a string', () => {
-  test('A simple case of a sentence expression', () => {
+  test('A simple case of a word', () => {
       expect('boss'.words()).toBe(['boss']);
   });
   test('a sentence of several word', () => {
     expect('my age is 12 years old'.words()).toBe(['my', 'age', 'is', '12', 'years', 'old' ]);
+  });
+  test('A case of an empty string', () => {
+    expect(''.words()).toBe(null);
   });
 });
