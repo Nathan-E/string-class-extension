@@ -39,4 +39,9 @@ String.prototype.ucFirst = function () {
 String.prototype.isQuestion = function () {
     return /\?$/.test(this);
   }
+
+// words: Returns a list of the words in the string, as an Array. This method must implement Regular Expression.
+String.prototype.words = function () {
+    return this.match(/(\w+)/g)
+  }
 module.export =  'String'; 
