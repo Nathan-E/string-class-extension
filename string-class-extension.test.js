@@ -70,6 +70,16 @@ describe('Checks if a string is a question', () => {
       expect('Do you have a pen?'.isQuestion()).toBeTruthy();
   });
   test('when the question is within the words', () => {
-    expect('Do ?you have a pen'.isQuestion()).toBeFalsy());
+    expect('Do ?you have a pen'.isQuestion()).toBeFalsy();
+  });
+});
+
+//Return a list of words in a string
+describe('Array of words in a string', () => {
+  test('A simple case of a sentence expression', () => {
+      expect('boss'.words()).toBe(['boss']);
+  });
+  test('a sentence of several word', () => {
+    expect('my age is 12 years old'.words()).toBe(['my', 'age', 'is', '12', 'years', 'old' ]);
   });
 });
