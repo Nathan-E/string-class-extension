@@ -77,12 +77,22 @@ describe('Checks if a string is a question', () => {
 //Return a list of words in a string
 describe('Array of words in a string', () => {
   test('A simple case of a word', () => {
-      expect('boss'.words()).toBe(['boss']);
+      expect('boss'.words()).toEqual([ 'boss' ]);
   });
   test('a sentence of several word', () => {
-    expect('my age is 12 years old'.words()).toBe(['my', 'age', 'is', '12', 'years', 'old' ]);
+    expect('my age is 12 years old'.words()).toEqual([ 'my', 'age', 'is', '12', 'years', 'old' ]);
   });
   test('A case of an empty string', () => {
     expect(''.words()).toBe(null);
+  });
+});
+
+//wordCount returns the number of the words in a string
+describe('returns the nubmer of words in a string', () => {
+  test('A simple case of a word', () => {
+      expect('boss'.wordCount()).toEqual(1);
+  });
+  test('a sentence of several word', () => {
+    expect('my age is 12 years old'.wordCount()).toEqual(6);
   });
 });
