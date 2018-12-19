@@ -44,4 +44,10 @@ String.prototype.isQuestion = function () {
 String.prototype.words = function () {
     return this.match(/(\w+)/g)
   }
+
+// wordCount (typeof Number): Returns the number of words in the string. It must make use of the words method above
+
+String.prototype.wordCount = function () {
+    return this.words().length;
+  }
 module.export =  'String'; 
