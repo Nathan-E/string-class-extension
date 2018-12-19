@@ -34,4 +34,9 @@ String.prototype.ucFirst = function () {
     return (this[0].toUpper() + this.substring(1,this.length));
   }
 
+  // isQuestion (typeof Boolean): Return true if the string is a question (ending with a question
+// mark). This method must implement Regular Expression.
+String.prototype.isQuestion = function () {
+    return /\?$/.test(this);
+  }
 module.export =  'String'; 
