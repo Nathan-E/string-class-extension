@@ -5,12 +5,12 @@ describe('Testing if a string has Vowels', () => {
        expect('dry'.hasVowels()).toBeFalsy();
    });
    test('A simple case where a vowel exist', () => {
-       expect('Gray'.hasVowels()).toBeTruthy();
+       expect('who'.hasVowels()).toBeTruthy();
    });
    test('A simple case where an uppercase vowel exist', () => {
       expect('Add'.hasVowels()).toBeTruthy();
     });
     test('A simple case of empty string', () => {
-       expect('Add'.hasVowels()).toBeFalsy();
+       expect(''.hasVowels()).toBeFalsy();
     });
 });
