@@ -18,7 +18,16 @@ describe('Testing if a string has Vowels', () => {
 
 //test for toUpper function
 describe('Changes the case of a string to Uppercase', () => {
-  test('A simple case of lowercase letters of a string ', () => {
+  test('A simple case of all lowercase letters of a string ', () => {
       expect('dry'.hasVowels()).toBe('DRY');
+  });
+  test('A  case of all uppercase letters of a string ', () => {
+      expect('HOME'.hasVowels()).toBe('HOME');
+  });
+  test('A  case of mixed case letters of a string ', () => {
+      expect('DEcaGOn'.hasVowels()).toBe('DECAGON');
+  });
+  test('A  case of non letters and letters ', () => {
+      expect('123ab'.hasVowels()).toBe('123AB');
   });
 });
