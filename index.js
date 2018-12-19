@@ -11,9 +11,21 @@ String.prototype.hasVowels = function () {
 String.prototype.toUpper = function () {
     const check = /[a-z]/;
     let result = '';
-    for(let i = 0; i<this.length; i++){
-      result += this[i].replace(check, String.fromCharCode(this[i].charCodeAt(0)-32));
-    }
+        for(let i = 0; i<this.length; i++){
+        result += this[i].replace(check, String.fromCharCode(this[i].charCodeAt(0)-32));
+        }
+    return result;
+  };
+
+// toLower (typeof String): Returns the String in question but with all characters in their lowercases as applicable. This method should be implemented without the use of the
+// toLowerCase internal methods.
+
+    String.prototype.toLower = function () {
+    const check = /[A-Z]/;
+    let result = '';
+        for(let i = 0; i<this.length; i++){
+        result += this[i].replace(check, String.fromCharCode(this[i].charCodeAt(0)+32));
+        }
     return result;
   }
 
