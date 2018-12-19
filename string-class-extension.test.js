@@ -96,3 +96,13 @@ describe('returns the nubmer of words in a string', () => {
     expect('my age is 12 years old'.wordCount()).toEqual(6);
   });
 });
+
+//Returns a number representation of the Currency String
+describe('returns the nubmer of words in a string', () => {
+  test('A simple case of a string', () => {
+      expect('11,111.1'.fromCurrency()).toEqual(11111.1);
+  });
+  test('a case of a million', () => {
+    expect('1,000,000'.fromCurrency()).toEqual(1000000);
+  });
+});
