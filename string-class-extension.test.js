@@ -60,3 +60,14 @@ describe('Changes the case of the first character in a string to Uppercase', () 
     expect('DecoraTE'.ucFirst()).toBe('DecoraTE');
   });
 });
+
+//test for isQuestion function
+describe('Checks if a string is a question', () => {
+  test('A simple case of a sentence expression', () => {
+      expect('i want to go home'.isQuestion()).toBeFalsy();
+  });
+  test('A case of a question with question mark', () => {
+      expect('Do you have a pen?'.isQuestion()).toBeTruthy();
+  });
+
+});
