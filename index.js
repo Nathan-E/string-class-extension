@@ -20,7 +20,7 @@ String.prototype.toUpper = function () {
 // toLower (typeof String): Returns the String in question but with all characters in their lowercases as applicable. This method should be implemented without the use of the
 // toLowerCase internal methods.
 
-    String.prototype.toLower = function () {
+String.prototype.toLower = function () {
     const check = /[A-Z]/;
     let result = '';
         for(let i = 0; i<this.length; i++){
@@ -29,5 +29,9 @@ String.prototype.toUpper = function () {
     return result;
   }
 
+  // ucFirst (typeof String): Returns the String in question but changes the First Character to an Upper case. Make use of your toUpper method above to implement this method or a one-liner.
+String.prototype.ucFirst = function () {
+    return (this[0].toUpper() + this.substring(1,this.length));
+  }
 
 module.export =  'String'; 

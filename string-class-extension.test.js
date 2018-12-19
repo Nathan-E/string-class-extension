@@ -56,5 +56,7 @@ describe('Changes the case of the first character in a string to Uppercase', () 
   test('A  case of all uppercase letters of a string ', () => {
       expect('HOME'.ucFirst()).toBe('HOME');
   });
-
+  test('A case of a mixed string ', () => {
+    expect('DecoraTE'.ucFirst()).toBe('DecoraTE');
+  });
 });
