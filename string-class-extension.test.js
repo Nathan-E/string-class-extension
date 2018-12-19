@@ -69,5 +69,7 @@ describe('Checks if a string is a question', () => {
   test('A case of a question with question mark', () => {
       expect('Do you have a pen?'.isQuestion()).toBeTruthy();
   });
-
+  test('when the question is within the words', () => {
+    expect('Do ?you have a pen'.isQuestion()).toBeFalsy());
+  });
 });
