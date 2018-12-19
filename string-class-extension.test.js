@@ -47,3 +47,14 @@ describe('Changes the case of a string to Uppercase', () => {
       expect('123aB'.toLower()).toBe('123ab');
   });
 });
+
+//test for ucFirst function
+describe('Changes the case of the first character in a string to Uppercase', () => {
+  test('A simple case of all lowercase letters of a string ', () => {
+      expect('gist'.ucFirst()).toBe('Gist');
+  });
+  test('A  case of all uppercase letters of a string ', () => {
+      expect('HOME'.ucFirst()).toBe('HOME');
+  });
+
+});
