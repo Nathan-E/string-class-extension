@@ -40,4 +40,10 @@ describe('Changes the case of a string to Uppercase', () => {
   test('A  case of all uppercase letters of a string ', () => {
       expect('HOME'.toLower()).toBe('home');
   });
+  test('A  case of mixed case letters of a string ', () => {
+    expect('DEcaGOn'.toLower()).toBe('decagon');
+  });
+  test('A  case of non letters and letters ', () => {
+      expect('123aB'.toLower()).toBe('123ab');
+  });
 });
