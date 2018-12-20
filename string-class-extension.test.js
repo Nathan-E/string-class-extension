@@ -106,3 +106,16 @@ describe('returns the nubmer of words in a string', () => {
     expect('1,000,000'.fromCurrency()).toEqual(1000000);
   });
 });
+
+//Returns each letter in the string as an inverse of its current case
+describe('Inverses the case of characters in a string', () => {
+  test('A simple case of a string', () => {
+      expect('Mr Ben'.inverseCase()).toEqual('mR bEN');
+  });
+  test('a case of a sentence', () => {
+    expect('I Love You'.inverseCase()).toEqual('i lOVE yOU');
+  });
+  test('a case of a sentence containing non-alphabets', () => {
+    expect('Will we go?'.inverseCase()).toEqual('wILL WE GO?');
+  });
+});
