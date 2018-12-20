@@ -63,6 +63,15 @@ String.prototype.inverseCase = function () {
       /[a-z]/.test(this[i]) ? result += this[i].toUpper() : result += this[i].toLower();
     }
     return result;
-}
+};
+
+// aternatinglCase (typeof String): Returns the letters in alternating cases. It must start with a lower case e.g Onomatopoeia should return oNoMaToPoEiA.
+String.prototype.alternatingCase = function () {
+    let result = this[0].toLower();
+    for(let i = 1; i < this.length; i++){
+      (i%2 === 0) ? result += this[i].toLower(): result += this[i].toUpper(); 
+    }
+    return result;
+  }
 
 module.export =  'String'; 
