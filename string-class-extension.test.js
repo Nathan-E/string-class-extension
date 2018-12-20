@@ -145,3 +145,16 @@ describe('Alternates the case of characters in a string', () => {
     expect('2ac4'.numberWords()).toEqual('two four');
   });
 });
+
+//Checks if a value is a digit
+describe(' Checks if a value is a digit', () => {
+  test('A simple case of a string of a  number', () => {
+      expect('5'.isDigit()).toBeTruthy();
+  });
+  test('A simple case of a string of over a number', () => {
+    expect('24'.isDigit()).toBeFalsy();
+  });
+  test('a case of a string of an alphabet', () => {
+    expect('d'.isDigit()).toBeFalsy();
+  });
+});
