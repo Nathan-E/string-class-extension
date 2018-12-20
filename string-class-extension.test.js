@@ -1,7 +1,7 @@
 require('./index');
 
 //test for hasVowel function
-describe('Testing if a string has Vowels', () => {
+describe('1.  Testing if a string has Vowels', () => {
    test('A simple case where no vowel exist', () => {
        expect('dry'.hasVowels()).toBeFalsy();
    });
@@ -17,7 +17,7 @@ describe('Testing if a string has Vowels', () => {
 });
 
 //test for toUpper function
-describe('Changes the case of a string to Uppercase', () => {
+describe('2.  Changes the case of a string to Uppercase', () => {
   test('A simple case of all lowercase letters of a string ', () => {
       expect('dry'.toUpper()).toBe('DRY');
   });
@@ -33,7 +33,7 @@ describe('Changes the case of a string to Uppercase', () => {
 });
 
 //test for toLower function
-describe('Changes the case of a string to Uppercase', () => {
+describe('3.  Changes the case of a string to Uppercase', () => {
   test('A simple case of all lowercase letters of a string ', () => {
       expect('dry'.toLower()).toBe('dry');
   });
@@ -49,7 +49,7 @@ describe('Changes the case of a string to Uppercase', () => {
 });
 
 //test for ucFirst function
-describe('Changes the case of the first character in a string to Uppercase', () => {
+describe('4.  Changes the case of the first character in a string to Uppercase', () => {
   test('A simple case of all lowercase letters of a string ', () => {
       expect('gist'.ucFirst()).toBe('Gist');
   });
@@ -62,7 +62,7 @@ describe('Changes the case of the first character in a string to Uppercase', () 
 });
 
 //test for isQuestion function
-describe('Checks if a string is a question', () => {
+describe('5.  Checks if a string is a question', () => {
   test('A simple case of a sentence expression', () => {
       expect('i want to go home'.isQuestion()).toBeFalsy();
   });
@@ -75,7 +75,7 @@ describe('Checks if a string is a question', () => {
 });
 
 //Return a list of words in a string
-describe('Array of words in a string', () => {
+describe('6.  Array of words in a string', () => {
   test('A simple case of a word', () => {
       expect('boss'.words()).toEqual([ 'boss' ]);
   });
@@ -88,7 +88,7 @@ describe('Array of words in a string', () => {
 });
 
 //wordCount returns the number of the words in a string
-describe('returns the nubmer of words in a string', () => {
+describe('7.  Returns the nubmer of words in a string', () => {
   test('A simple case of a word', () => {
       expect('boss'.wordCount()).toEqual(1);
   });
@@ -98,7 +98,7 @@ describe('returns the nubmer of words in a string', () => {
 });
 
 //Returns a number representation of the Currency String
-describe('returns the nubmer of words in a string', () => {
+describe('8.  Returns the nubmer of words in a string', () => {
   test('A simple case of a string', () => {
       expect('11,111.1'.fromCurrency()).toEqual('11111.1');
   });
@@ -108,7 +108,7 @@ describe('returns the nubmer of words in a string', () => {
 });
 
 //Returns each letter in the string as an inverse of its current case
-describe('Inverses the case of characters in a string', () => {
+describe('9.  Inverses the case of characters in a string', () => {
   test('A simple case of a string', () => {
       expect('Mr Ben'.inverseCase()).toEqual('mR bEN');
   });
@@ -121,7 +121,7 @@ describe('Inverses the case of characters in a string', () => {
 });
 
 //Alternates the case of a string starting with lower case
-describe('Alternates the case of characters in a string', () => {
+describe('10. Alternates the case of characters in a string', () => {
   test('A simple case of a string', () => {
       expect('Onomatopoeia'.alternatingCase()).toEqual('oNoMaToPoEiA');
   });
@@ -134,7 +134,7 @@ describe('Alternates the case of characters in a string', () => {
 });
 
 //Returns the numbers in their equivalent words
-describe('Alternates the case of characters in a string', () => {
+describe('11. Replace the numbers in a string with their equivalent words', () => {
   test('A simple case of a string of numbers', () => {
       expect('34467'.numberWords()).toEqual('three four four six seven');
   });
@@ -147,7 +147,7 @@ describe('Alternates the case of characters in a string', () => {
 });
 
 //Checks if a value is a digit
-describe(' Checks if a value is a digit', () => {
+describe('12. Checks if a value is a digit', () => {
   test('A simple case of a string of a  number', () => {
       expect('5'.isDigit()).toBeTruthy();
   });
