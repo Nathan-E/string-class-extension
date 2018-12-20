@@ -121,14 +121,27 @@ describe('Inverses the case of characters in a string', () => {
 });
 
 //Alternates the case of a string starting with lower case
-describe('Inverses the case of characters in a string', () => {
+describe('Alternates the case of characters in a string', () => {
   test('A simple case of a string', () => {
-      expect('Onomatopoei'.alternatingCase()).toEqual('oNoMaToPoEiA');
+      expect('Onomatopoeia'.alternatingCase()).toEqual('oNoMaToPoEiA');
   });
   test('a case of all Upper case string', () => {
     expect('MOVE'.alternatingCase()).toEqual('mOvE');
   });
   test('a case of a sentence containing non-alphabets', () => {
     expect('car'.alternatingCase()).toEqual('cAr');
+  });
+});
+
+//Returns the numbers in their equivalent words
+describe('Alternates the case of characters in a string', () => {
+  test('A simple case of a string of numbers', () => {
+      expect('34467'.numberWords()).toEqual('three four four six seven');
+  });
+  test('A simple case of a string of a number', () => {
+    expect('2'.numberWords()).toEqual('two');
+  });
+  test('a case of a string containing alphabets', () => {
+    expect('2ac4'.numberWords()).toEqual('two four');
   });
 });
