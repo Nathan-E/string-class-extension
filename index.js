@@ -69,8 +69,8 @@ String.prototype.inverseCase = function () {
 // aternatinglCase (typeof String): Returns the letters in alternating cases. It starts with a lower case e.g Onomatopoeia should return oNoMaToPoEiA.
 String.prototype.alternatingCase = function () {
   let result = this[0].toLower();
-  for (let i = 1; i < this.length; i++) {
-    (i % 2 === 0) ? result += this[i].toLower(): result += this[i].toUpper();
+  for (let index = 1; index < this.length; index++) {
+    (index % 2 === 0) ? result += this[index].toLower(): result += this[index].toUpper();
   }
   return result;
 };
@@ -91,8 +91,8 @@ String.prototype.numberWords = function () {
     9: 'nine '
   };
   let result = '';
-  for (let i = 0; i < this.length; i++) {
-    /[0-9]/.test(this[i]) ? result += match[this[i]] : result += '';
+  for (let index = 0; index < this.length; index++) {
+    /[0-9]/.test(this[index]) ? result += match[this[index]] : result += '';
   }
   return result.trim();
 };
