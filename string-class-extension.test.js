@@ -2,59 +2,59 @@ require('./index');
 
 //test for hasVowel function
 describe('1.  Testing if a string has Vowels', () => {
-   test('A simple case where no vowel exist', () => {
-       expect('dry'.hasVowels()).toBeFalsy();
-   });
-   test('A simple case where a vowel exist', () => {
-       expect('who'.hasVowels()).toBeTruthy();
-   });
-   test('A simple case where an uppercase vowel exist', () => {
-      expect('Add'.hasVowels()).toBeTruthy();
-    });
-    test('A simple case of empty string', () => {
-       expect(''.hasVowels()).toBeFalsy();
-    });
+  test('A simple case where no vowel exist', () => {
+    expect('dry'.hasVowels()).toBeFalsy();
+  });
+  test('A simple case where a vowel exist', () => {
+    expect('who'.hasVowels()).toBeTruthy();
+  });
+  test('A simple case where an uppercase vowel exist', () => {
+    expect('Add'.hasVowels()).toBeTruthy();
+  });
+  test('A simple case of empty string', () => {
+    expect(''.hasVowels()).toBeFalsy();
+  });
 });
 
 //test for toUpper function
 describe('2.  Changes the case of a string to Uppercase', () => {
   test('A simple case of all lowercase letters of a string ', () => {
-      expect('dry'.toUpper()).toBe('DRY');
+    expect('dry'.toUpper()).toBe('DRY');
   });
   test('A  case of all uppercase letters of a string ', () => {
-      expect('HOME'.toUpper()).toBe('HOME');
+    expect('HOME'.toUpper()).toBe('HOME');
   });
   test('A  case of mixed case letters of a string ', () => {
-      expect('DEcaGOn'.toUpper()).toBe('DECAGON');
+    expect('DEcaGOn'.toUpper()).toBe('DECAGON');
   });
   test('A  case of non letters and letters ', () => {
-      expect('123ab'.toUpper()).toBe('123AB');
+    expect('123ab'.toUpper()).toBe('123AB');
   });
 });
 
 //test for toLower function
 describe('3.  Changes the case of a string to Uppercase', () => {
   test('A simple case of all lowercase letters of a string ', () => {
-      expect('dry'.toLower()).toBe('dry');
+    expect('dry'.toLower()).toBe('dry');
   });
   test('A  case of all uppercase letters of a string ', () => {
-      expect('HOME'.toLower()).toBe('home');
+    expect('HOME'.toLower()).toBe('home');
   });
   test('A  case of mixed case letters of a string ', () => {
     expect('DEcaGOn'.toLower()).toBe('decagon');
   });
   test('A  case of non letters and letters ', () => {
-      expect('123aB'.toLower()).toBe('123ab');
+    expect('123aB'.toLower()).toBe('123ab');
   });
 });
 
 //test for ucFirst function
 describe('4.  Changes the case of the first character in a string to Uppercase', () => {
   test('A simple case of all lowercase letters of a string ', () => {
-      expect('gist'.ucFirst()).toBe('Gist');
+    expect('gist'.ucFirst()).toBe('Gist');
   });
   test('A  case of all uppercase letters of a string ', () => {
-      expect('HOME'.ucFirst()).toBe('HOME');
+    expect('HOME'.ucFirst()).toBe('HOME');
   });
   test('A case of a mixed string ', () => {
     expect('DecoraTE'.ucFirst()).toBe('DecoraTE');
@@ -64,10 +64,10 @@ describe('4.  Changes the case of the first character in a string to Uppercase',
 //test for isQuestion function
 describe('5.  Checks if a string is a question', () => {
   test('A simple case of a sentence expression', () => {
-      expect('i want to go home'.isQuestion()).toBeFalsy();
+    expect('i want to go home'.isQuestion()).toBeFalsy();
   });
   test('A case of a question with question mark', () => {
-      expect('Do you have a pen?'.isQuestion()).toBeTruthy();
+    expect('Do you have a pen?'.isQuestion()).toBeTruthy();
   });
   test('when the question is within the words', () => {
     expect('Do ?you have a pen'.isQuestion()).toBeFalsy();
@@ -77,10 +77,10 @@ describe('5.  Checks if a string is a question', () => {
 //Return a list of words in a string
 describe('6.  Array of words in a string', () => {
   test('A simple case of a word', () => {
-      expect('boss'.words()).toEqual([ 'boss' ]);
+    expect('boss'.words()).toEqual(['boss']);
   });
   test('a sentence of several word', () => {
-    expect('my age is 12 years old'.words()).toEqual([ 'my', 'age', 'is', '12', 'years', 'old' ]);
+    expect('my age is 12 years old'.words()).toEqual(['my', 'age', 'is', '12', 'years', 'old']);
   });
   test('A case of an empty string', () => {
     expect(''.words()).toBe(null);
@@ -90,7 +90,7 @@ describe('6.  Array of words in a string', () => {
 //wordCount returns the number of the words in a string
 describe('7.  Returns the nubmer of words in a string', () => {
   test('A simple case of a word', () => {
-      expect('boss'.wordCount()).toEqual(1);
+    expect('boss'.wordCount()).toEqual(1);
   });
   test('a sentence of several word', () => {
     expect('my age is 12 years old'.wordCount()).toEqual(6);
@@ -100,7 +100,7 @@ describe('7.  Returns the nubmer of words in a string', () => {
 //Returns a number representation of the Currency String
 describe('8.  Returns the nubmer of words in a string', () => {
   test('A simple case of a string', () => {
-      expect('11,111.1'.fromCurrency()).toEqual('11111.1');
+    expect('11,111.1'.fromCurrency()).toEqual('11111.1');
   });
   test('a case of a million', () => {
     expect('1,000,000'.fromCurrency()).toEqual('1000000');
@@ -110,7 +110,7 @@ describe('8.  Returns the nubmer of words in a string', () => {
 //Returns each letter in the string as an inverse of its current case
 describe('9.  Inverses the case of characters in a string', () => {
   test('A simple case of a string', () => {
-      expect('Mr Ben'.inverseCase()).toEqual('mR bEN');
+    expect('Mr Ben'.inverseCase()).toEqual('mR bEN');
   });
   test('a case of a sentence', () => {
     expect('I Love You'.inverseCase()).toEqual('i lOVE yOU');
@@ -123,7 +123,7 @@ describe('9.  Inverses the case of characters in a string', () => {
 //Alternates the case of a string starting with lower case
 describe('10. Alternates the case of characters in a string', () => {
   test('A simple case of a string', () => {
-      expect('Onomatopoeia'.alternatingCase()).toEqual('oNoMaToPoEiA');
+    expect('Onomatopoeia'.alternatingCase()).toEqual('oNoMaToPoEiA');
   });
   test('a case of all Upper case string', () => {
     expect('MOVE'.alternatingCase()).toEqual('mOvE');
@@ -136,7 +136,7 @@ describe('10. Alternates the case of characters in a string', () => {
 //Returns the numbers in their equivalent words
 describe('11. Replace the numbers in a string with their equivalent words', () => {
   test('A simple case of a string of numbers', () => {
-      expect('34467'.numberWords()).toEqual('three four four six seven');
+    expect('34467'.numberWords()).toEqual('three four four six seven');
   });
   test('A simple case of a string of a number', () => {
     expect('2'.numberWords()).toEqual('two');
@@ -149,7 +149,7 @@ describe('11. Replace the numbers in a string with their equivalent words', () =
 //Checks if a value is a digit
 describe('12. Checks if a value is a digit', () => {
   test('A simple case of a string of a  number', () => {
-      expect('5'.isDigit()).toBeTruthy();
+    expect('5'.isDigit()).toBeTruthy();
   });
   test('A simple case of a string of over a number', () => {
     expect('24'.isDigit()).toBeFalsy();
