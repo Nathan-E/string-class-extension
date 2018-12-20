@@ -55,4 +55,14 @@ String.prototype.wordCount = function () {
 String.prototype.fromCurrency = function () {
     return this.replace(/\,/g, '');
   };
+
+// inverseCase (typeof String): Returns each letter in the string as an inverse of its current case e.g Mr. Ben should return mR. bEN.
+String.prototype.inverseCase = function () {
+    let result = '';
+    for (let i =0; i<this.length; i++){
+      /[a-z]/.test(this[i]) ? result += this[i].toUpper() : result += this[i].toLower();
+    }
+    return result;
+}
+
 module.export =  'String'; 
