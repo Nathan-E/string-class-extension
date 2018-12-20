@@ -72,6 +72,29 @@ String.prototype.alternatingCase = function () {
       (i%2 === 0) ? result += this[i].toLower(): result += this[i].toUpper(); 
     }
     return result;
+  };
+
+// numberWords (typeof String): Returns the numbers in words e.g 325 should return three two five.
+
+String.prototype.numberWords = function () {
+    const match = {
+      0: 'zero ', 
+      1: 'one ',
+      2: 'two ', 
+      3: 'three ',
+      4: 'four ', 
+      5: 'five ',
+      6: 'six ', 
+      7: 'seven ',
+      8: 'eight ', 
+      9: 'nine '
+    };
+    let result = '';
+    for (let i = 0; i < this.length; i++){
+      /[0-9]/.test(this[i]) ? result += match[this[i]] : result += '';
+    }
+    return result;  
   }
+  
 
 module.export =  'String'; 
