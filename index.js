@@ -60,8 +60,8 @@ String.prototype.fromCurrency = function () {
 // inverseCase (typeof String): Returns each letter in the string as an inverse of its current case e.g Mr. Ben returns mR. bEN.
 String.prototype.inverseCase = function () {
   let result = '';
-  for (let i = 0; i < this.length; i++) {
-    /[a-z]/.test(this[i]) ? result += this[i].toUpper() : result += this[i].toLower();
+  for (let index = 0; index < this.length; index++) {
+    /[a-z]/.test(this[index]) ? result += this[index].toUpper() : result += this[index].toLower();
   }
   return result;
 };
