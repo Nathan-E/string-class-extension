@@ -94,7 +94,13 @@ String.prototype.numberWords = function () {
       /[0-9]/.test(this[i]) ? result += match[this[i]] : result += '';
     }
     return result;  
+  };
+
+// isDigit (typeof Boolean): Returns true if the string is a digit(one number) e.g 3 should return true and 34 should return false. This method must implement Regular Expression.
+String.prototype.isDigit = function () {
+    return /^\d$/.test(this); 
   }
+  console.log('8e'.isDigit());
   
 
 module.export =  'String'; 
