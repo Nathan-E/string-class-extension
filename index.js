@@ -1,6 +1,7 @@
 // hasVowels (typeof Boolean): Returns true if the string contains vowels. 
 // This method implements Regular Expression.
 String.prototype.hasVowels = function () {
+  //the regex literal /[aeiou]/i checks for vowels and the search is case insensitive
   return /[aeiou]/i.test(this);
 };
 
@@ -9,9 +10,12 @@ String.prototype.hasVowels = function () {
 // toUpperCase internal methods.
 
 String.prototype.toUpper = function () {
+  //the regex literal /[a-z]/ searches for alphabet between a to z
   const check = /[a-z]/;
   let result = '';
+  //loops through the characters in the string argument
   for (let index = 0; index < this.length; index++) {
+    //the replace method converts lowercase character to uppercase using ASCII table
     result += this[index].replace(check, String.fromCharCode(this[index].charCodeAt(0) - 32));
   }
   return result;
@@ -21,9 +25,12 @@ String.prototype.toUpper = function () {
 // This method was implemented without the use of the toLowerCase internal methods.
 
 String.prototype.toLower = function () {
+  //the regex literal /[A-Z]/ searches for alphabet between A to Z
   const check = /[A-Z]/;
   let result = '';
+  //loops through the characters in the string argument
   for (let index = 0; index < this.length; index++) {
+  //the replace method converts Uppercase character to lowercase using ASCII table
     result += this[index].replace(check, String.fromCharCode(this[index].charCodeAt(0) + 32));
   }
   return result;
