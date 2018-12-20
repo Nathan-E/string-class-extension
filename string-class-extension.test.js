@@ -100,10 +100,10 @@ describe('returns the nubmer of words in a string', () => {
 //Returns a number representation of the Currency String
 describe('returns the nubmer of words in a string', () => {
   test('A simple case of a string', () => {
-      expect('11,111.1'.fromCurrency()).toEqual(11111.1);
+      expect('11,111.1'.fromCurrency()).toEqual('11111.1');
   });
   test('a case of a million', () => {
-    expect('1,000,000'.fromCurrency()).toEqual(1000000);
+    expect('1,000,000'.fromCurrency()).toEqual('1000000');
   });
 });
 
@@ -117,5 +117,18 @@ describe('Inverses the case of characters in a string', () => {
   });
   test('a case of a sentence containing non-alphabets', () => {
     expect('Will we go?'.inverseCase()).toEqual('wILL WE GO?');
+  });
+});
+
+//Alternates the case of a string starting with lower case
+describe('Inverses the case of characters in a string', () => {
+  test('A simple case of a string', () => {
+      expect('Onomatopoei'.alternatingCase()).toEqual('oNoMaToPoEiA');
+  });
+  test('a case of all Upper case string', () => {
+    expect('MOVE'.alternatingCase()).toEqual('mOvE');
+  });
+  test('a case of a sentence containing non-alphabets', () => {
+    expect('car'.alternatingCase()).toEqual('cAr');
   });
 });
